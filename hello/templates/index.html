@@ -1,12 +1,12 @@
 <textarea id="mine">
-{% ssi 'submissions/player1.txt' %}
+{% include 'submissions/player1.txt' %}
 </textarea>
 <br>
 <button>Go</button>
 <br>
 <div id="theirs">
 
-{% ssi 'submissions/player2.txt' %}
+{% include 'submissions/player2.txt' %}
 </div>
 
 <br>
@@ -15,5 +15,5 @@
 </iframe>
 <br>
 <div id="resultSource">
-{% ssi 'result.html' parsed %}
+{% include 'result.html' %}
 </div>
