@@ -1,0 +1,1 @@
+web: ocrbackend gettingstarted.wsgi --log-file -
