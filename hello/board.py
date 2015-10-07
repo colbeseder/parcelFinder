@@ -4,17 +4,21 @@ class Board:
 	
 	def set(self, player, code):
 		if player == 1:
-			pass
+			path = self.code1_path
 		else:
-			pass
+			path = self.code2_path
+		
+		text_file = open(path, "w")
+		text_file.write(code)
+		text_file.close()
 
 	def get(self, player):
 		if player == 1:
-			return open (self.code1_path, "r").read()
+			path = self.code1_path
 		else:
-			return open (self.code2_path, "r").read()
-			
-	
+			path = self.code2_path
+		return open (path, "r").read()
+
 
 class Fetch:
 	def __init__(self, board, player):
