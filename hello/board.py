@@ -17,10 +17,10 @@ class Fetch:
 		return self.player
 
 	def mine(self):
-		return board.code1
+		return self.board.code1
 
 	def theirs(self):
-		return board.code2
+		return self.board.code2
 	
 	def set_mine(self, code):
 		self.board.set(self.player, code)
