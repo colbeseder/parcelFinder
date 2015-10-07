@@ -7,8 +7,8 @@ class Fetch:
 	def whoami(self):
 		return self.player
 
-	def mine(self, escaped=True):
+	def mine(self, escape=True):
 		return self.example1
 
-	def theirs(self):
+	def theirs(self, escape=True):
 		return self.example2

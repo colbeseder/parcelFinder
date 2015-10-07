@@ -6,18 +6,25 @@ from .models import Greeting
 
 from fetch import Fetch
 
-
 # Create your views here.
 def index(request):
+	f = Fetch(1)
     c = Context({
-		"mine":"a",
-		"theirs":"b"
+		"mine"        : f.mine(False),
+		"theirs"      : f.theirs(False),
+		"mine_safe"   : f.mine(True),
+		"theirs_safe" : f.theirs(True)
 	})
     return render(request, 'index.html', c)
 
 def result(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'result.html')
+    c = Context({
+		"mine"        : f.mine(False),
+		"theirs"      : f.theirs(False),
+		"mine_safe"   : f.mine(True),
+		"theirs_safe" : f.theirs(True)
+	})
+    return render(request, 'result.html', c)
 
 def db(request):
 
