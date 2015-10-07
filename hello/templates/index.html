@@ -15,5 +15,7 @@
 </iframe>
 <br>
 <div id="resultSource">
-{% include 'result.html' %}
+{% autoescape on %}
+	{% include 'result.html' %}
+{% endautoescape %}
 </div>
