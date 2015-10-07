@@ -4,20 +4,22 @@
 {{ mine_safe }}
 </textarea>
 <br>
-<button>Go</button>
+<button id="go">Go</button>
 <br>
 <div id="theirs">
 {{ theirs_safe }}
 </div>
 
 <br>
-<iframe id="result" src="result.html">
-
-</iframe>
+<iframe id="result" src="result.html"></iframe>
 <br>
 <pre id="resultSource"></pre>
 <script>
 $.get("result.html", function(d){
 	$("#resultSource").text(d);
 });
+
+function submit(){
+	$.post("submit.html", {player:1, code: $("#go").text() } );
+}
 </script>

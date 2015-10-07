@@ -4,26 +4,25 @@ from django.template import Context
 
 from .models import Greeting
 
-from fetch import Fetch
+from board import *
+
+game_board = Board()
+
 
 # Create your views here.
 def index(request):
-    f = Fetch(1)
+    f = Fetch(game_board, 1)
     c = Context({
-        "mine"        : f.mine(False),
-        "theirs"      : f.theirs(False),
-        "mine_safe"   : f.mine(True),
-        "theirs_safe" : f.theirs(True)
+        "mine"        : f.mine(),
+        "theirs"      : f.theirs()
     })
     return render(request, 'index.html', c)
 
 def result(request):
-    f = Fetch(1)
+    f = Fetch(game_board, 1)
     c = Context({
-        "mine"        : f.mine(False),
-        "theirs"      : f.theirs(False),
-        "mine_safe"   : f.mine(True),
-        "theirs_safe" : f.theirs(True)
+        "mine"        : f.mine(),
+        "theirs"      : f.theirs()
     })
     return render(request, 'result.html', c)
 
