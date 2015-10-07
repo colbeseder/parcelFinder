@@ -1,14 +1,19 @@
 <textarea id="mine">
-console.log(1);
+{% ssi submissions/player1.txt %}
 </textarea>
 <br>
 <button>Go</button>
 <br>
-<div id="theirs"></div>
+<div id="theirs">
+
+{% ssi submissions/player2.txt %}
+</div>
 
 <br>
 <iframe id="result" src="result.html">
 
 </iframe>
 <br>
-<div id="resultSource"></div>
+<div id="resultSource">
+{% ssi result.html parsed %}
+</div>
