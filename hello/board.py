@@ -21,3 +21,6 @@ class Fetch
 
 	def theirs(self):
 		return board.code2
+	
+	def set_mine(self, code):
+		self.board.code1 = code
