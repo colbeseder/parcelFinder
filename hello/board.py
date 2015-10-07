@@ -1,19 +1,18 @@
 class Board:
-	code1 = "console.log('ex1<p>');"
 	code1_path = "/app/hello/submissions/player1.txt"
-	code2 = "console.log('ex2<p>');"
+	code2_path = "/app/hello/submissions/player1.txt"
 	
 	def set(self, player, code):
 		if player == 1:
-			code1 = code
+			pass
 		else:
-			code2 = code
-			
+			pass
+
 	def get(self, player):
 		if player == 1:
 			return open (self.code1_path, "r").read()
 		else:
-			return code2
+			return open (self.code2_path, "r").read()
 			
 	
 
