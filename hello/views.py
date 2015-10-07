@@ -18,6 +18,7 @@ def index(request):
     return render(request, 'index.html', c)
 
 def result(request):
+    f = Fetch(1)
     c = Context({
         "mine"        : f.mine(False),
         "theirs"      : f.theirs(False),

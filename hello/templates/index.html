@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 <textarea id="mine">
 {{ mine_safe }}
 </textarea>
@@ -13,8 +15,9 @@
 
 </iframe>
 <br>
-<div id="resultSource">
-<pre>
-{% include 'result.html' %}
-</pre>
-</div>
+<div id="resultSource"></div>
+<script>
+$.get("result.html", function(d){
+	$("#resultSource").text(d);
+});
+</script>
