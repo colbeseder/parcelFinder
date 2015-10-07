@@ -1,6 +1,6 @@
 class Board:
 	code1_path = "/app/hello/submissions/player1.txt"
-	code2_path = "/app/hello/submissions/player1.txt"
+	code2_path = "/app/hello/submissions/player2.txt"
 	
 	def set(self, player, code):
 		if player == 1:
