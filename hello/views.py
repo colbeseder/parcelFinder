@@ -20,6 +20,10 @@ def index(request):
 
 def result(request):
     f = Fetch(game_board, 1)
+    
+    if request.method == 'POST':
+        f.set_mine("'newly set'")
+    
     c = Context({
         "mine"        : f.mine(),
         "theirs"      : f.theirs()
