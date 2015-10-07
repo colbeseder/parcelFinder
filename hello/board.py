@@ -2,7 +2,7 @@ class Board:
 	code1 = "console.log('ex1<p>');"
 	code2 = "console.log('ex2<p>');"
 	
-	set(player, code):
+	def set(player, code):
 		if player == 1:
 			code1 = code
 		else:
@@ -23,4 +23,4 @@ class Fetch
 		return board.code2
 	
 	def set_mine(self, code):
-		self.board.code1 = code
+		self.board.set(self.player, code)
