@@ -11,7 +11,7 @@ class Board:
 			
 	def get(self, player):
 		if player == 1:
-			return open (code1_path, "r").read()
+			return open (self.code1_path, "r").read()
 		else:
 			return code2
 			
