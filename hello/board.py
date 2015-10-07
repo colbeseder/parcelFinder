@@ -1,6 +1,6 @@
 class Board:
 	code1 = "console.log('ex1<p>');"
-	code1_path = "console.log('ex1<p>');"
+	code1_path = "submissions/player1.txt"
 	code2 = "console.log('ex2<p>');"
 	
 	def set(self, player, code):
