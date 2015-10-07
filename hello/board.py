@@ -8,7 +8,7 @@ class Board:
 		else:
 			code2 = code
 
-class Fetch
+class Fetch:
 	def __init__(self, board, player):
 		self.board = board
 		self.player = player
