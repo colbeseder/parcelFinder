@@ -21,11 +21,12 @@ def index(request):
 def result(request):
     f = Fetch(game_board, 1)
     
+    new_code = "'newly set!'"
     if request.method == 'POST':
-        f.set_mine("'newly set'")
+        f.set_mine(new_code)
     
     c = Context({
-        "mine"        : f.mine(),
+        "mine"        : new_code,
         "theirs"      : f.theirs()
     })
     return render(request, 'result.html', c)
