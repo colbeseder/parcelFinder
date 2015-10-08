@@ -21,14 +21,18 @@ def index(request):
 def result(request):
     f = Fetch(game_board, 1)
     
-    new_code = "'newly set!'"
-    if request.method == 'POST':
-        f.set_mine(new_code)
-    
-    c = Context({
-        "mine"        : new_code,
+    context_data = {
         "theirs"      : f.theirs()
-    })
+    }
+    
+    if request.method == 'POST':
+        new_code = "'newly set!'"
+        f.set_mine(new_code)
+        context_data["mine"] = new_code #don't bother reading the file
+    else:
+        context_data["mine"] = f.mine()
+        
+    c = Context(context_data)
     return render(request, 'result.html', c)
 
 def db(request):
