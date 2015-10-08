@@ -20,7 +20,7 @@ $.get("result.html", function(d){
 });
 
 function update(){
-	$.post("submit.html", {player:1, code: $("#go").text() }, function(d){$("#resultSource").text(d)});
+	$.post("result.html", {player:1, code: $("#go").text() }, function(d){$("#resultSource").text(d)});
 }
 
 $("#go").click(update);
